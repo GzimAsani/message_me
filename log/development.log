@@ -1812,3 +1812,247 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 136ms (Views: 133.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/login" for ::1 at 2021-01-07 08:49:33 +0100
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dell/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 738ms (Views: 732.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-07 08:49:41 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VjCkKxdZUHt5GRVoj3/3QYSxzXsVusUA0E2jS9WVK0rHrcyN+Rv3RbEWHbw7NLekyf673d3fKzYoTy0J9U420g==", "session"=>{"username"=>"Gzim", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Gzim"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 330ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2021-01-07 08:49:41 +0100
+Processing by ChatroomController#index as HTML
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/chatroom/index.html.erb:10
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [4 times] (17.8ms)
+  Rendered chatroom/index.html.erb within layouts/application (31.3ms)
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered layouts/_navbar.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 148ms (Views: 135.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for ::1 at 2021-01-07 08:49:49 +0100
+Processing by ChatroomController#index as HTML
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/chatroom/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [4 times] (5.6ms)
+  Rendered chatroom/index.html.erb within layouts/application (8.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 89ms (Views: 86.8ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/logout" for ::1 at 2021-01-07 08:49:53 +0100
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"p+TBopkWDhZP/L2XHXQaXOWuW63GUZ7nn8mC1N/W/h02eakEd1SpKIfztUOpP1q5qOEtCw40cNFnywyW/w3jhQ=="}
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:49:53 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (1.4ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 83ms (Views: 82.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-07 08:49:56 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R1ne9Vxl4R0q5YrP5i0/kcvS2ymqo2QmosgW+n/yT9HWxLZTsidGI+LqghtSZn90hp2tj2LGihBaypi4XylSSQ==", "session"=>{"username"=>"", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", ""], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2021-01-07 08:52:05 +0100
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:52:05 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:52:14 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:52:16 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 75ms (Views: 73.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:52:45 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 70.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-01-07 08:52:48 +0100
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:52:48 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 79ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2021-01-07 08:52:56 +0100
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:52:56 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 72.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:53:25 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 89ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2021-01-07 08:53:29 +0100
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CZCPsDjjZpKjqc0C3L4dCJycpiBt+t9jJkLw0mNANM9i7P/JUNmx6f6QYcIo6LjbOoNmykNbm3XP5Sh3YsCtbg==", "session"=>{"username"=>"Gzim", "password"=>"[FILTERED]"}, "button"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = ? LIMIT ?[0m  [["username", "Gzim"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 315ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2021-01-07 08:53:29 +0100
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/chatroom/index.html.erb:10
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [4 times] (4.8ms)
+  Rendered chatroom/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 84ms (Views: 79.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/login" for ::1 at 2021-01-07 08:56:56 +0100
+  
+ActionController::RoutingError (undefined local variable or method `only' for SessionsController:Class):
+  
+app/controllers/sessions_controller.rb:2:in `<class:SessionsController>'
+app/controllers/sessions_controller.rb:1:in `<main>'
+Started GET "/login" for ::1 at 2021-01-07 08:57:12 +0100
+Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+Redirected to http://localhost:3000/
+Filter chain halted as :logged_in_redirect rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2021-01-07 08:57:12 +0100
+Processing by ChatroomController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendering chatroom/index.html.erb within layouts/application
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages"[0m
+  ↳ app/views/chatroom/index.html.erb:10
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/messages/_message.html.erb:4
+  Rendered collection of messages/_message.html.erb [4 times] (7.5ms)
+  Rendered chatroom/index.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 81ms (Views: 77.0ms | ActiveRecord: 1.1ms)
+
+

@@ -4487,3 +4487,85 @@ Started GET "/cable/" [WebSocket] for ::1 at 2021-01-07 17:23:49 +0100
 Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
 ChatroomChannel is transmitting the subscription confirmation
 ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2021-01-08 08:00:24 +0100
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/cable" for ::1 at 2021-01-08 08:00:24 +0100
+Started GET "/cable/" [WebSocket] for ::1 at 2021-01-08 08:00:24 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2021-01-08 08:00:42 +0100
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/" for ::1 at 2021-02-03 21:09:10 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dell/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 13ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-02-03 21:09:10 +0100
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.4ms)
+Completed 200 OK in 529ms (Views: 523.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for ::1 at 2021-02-03 21:09:11 +0100
+Started GET "/cable/" [WebSocket] for ::1 at 2021-02-03 21:09:11 +0100
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2021-02-03 21:09:41 +0100
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/" for ::1 at 2021-05-06 02:00:36 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/dell/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-05-06 02:00:36 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (13.2ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 583ms (Views: 580.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for ::1 at 2021-05-06 02:00:37 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2021-05-06 02:00:37 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2021-05-06 02:00:58 +0200
+ChatroomChannel stopped streaming from chatroom_channel
+Started GET "/" for ::1 at 2021-05-06 02:04:31 +0200
+Processing by ChatroomController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_user rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2021-05-06 02:04:31 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 72.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cable" for ::1 at 2021-05-06 02:04:32 +0200
+Started GET "/cable/" [WebSocket] for ::1 at 2021-05-06 02:04:32 +0200
+Successfully upgraded to WebSocket (REQUEST_METHOD: GET, HTTP_CONNECTION: Upgrade, HTTP_UPGRADE: websocket)
+ChatroomChannel is transmitting the subscription confirmation
+ChatroomChannel is streaming from chatroom_channel
+Finished "/cable/" [WebSocket] for ::1 at 2021-05-06 02:05:04 +0200
+ChatroomChannel stopped streaming from chatroom_channel

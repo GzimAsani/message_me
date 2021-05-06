@@ -8,7 +8,6 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-  * [Walkthrough Video and Deployment (Heroku)](#walkthrough-video-and-deployment-(heroku))
 * [Usage](#usage)
 * [Database Structure](#database-structure)
 * [Contributors](#contributors)
@@ -29,8 +28,6 @@ This project was built using these technologies.
 * Rubocop
 * PG
 
-## Live demo
-* Live Demo Link --> App Deployed with Heroku: [LifeStyle-Articles](https://dry-savannah-74700.herokuapp.com/) :point_left:
 
 ### Getting Started
 
@@ -93,9 +90,7 @@ Open `http://localhost:3000/` in your browser and sing in
 * Run the command and see the output: 
 ```$ rails test```
 
-## Database Structure
- * Database schema used for this project reflects the following structure:
- ![erd](app/assets/images/erd.png)
+
 
 ## Author
 
